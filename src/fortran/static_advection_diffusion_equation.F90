@@ -268,9 +268,9 @@ PROGRAM STATIC_ADVECTION_DIFFUSION_EQUATION
 !!  CALL cmfe_Field_ParameterSetDataGet(GeometricField,CMFE_FIELD_U_VARIABLE_TYPE,CMFE_FIELD_VALUES_SET_TYPE,GEOMETRIC_PARAMETERS, &
 !!    & Err)
   !Create the equations set independent field variables
-!!  CALL cmfe_Field_Initialise(IndependentField,Err)
-!!  CALL cmfe_EquationsSet_IndependentCreateStart(EquationsSet,IndependentFieldUserNumber,IndependentField,Err)
-!!  IF(NUMBER_GLOBAL_Z_ELEMENTS==0) THEN
+  CALL cmfe_Field_Initialise(IndependentField,Err)
+  CALL cmfe_EquationsSet_IndependentCreateStart(EquationsSet,IndependentFieldUserNumber,IndependentField,Err)
+  IF(NUMBER_GLOBAL_Z_ELEMENTS==0) THEN
   !For comparison withe analytical solution used here, the independent field must be set to the following:
   !w(x,y)=(sin 6y,cos 6x) FIELD_U_VARIABLE_TYPE,1,FIELD_NODE_BASED_INTERPOLATION
 !   CALL cmfe_Field_ComponentInterpolationSet(IndependentField,CMFE_FIELD_U_VARIABLE_TYPE,1,CMFE_FIELD_NODE_BASED_INTERPOLATION,Err) 
@@ -279,9 +279,9 @@ PROGRAM STATIC_ADVECTION_DIFFUSION_EQUATION
 !    DO
 
 !    ENDDO
-!!  ENDIF
+  ENDIF
   !Finish the equations set dependent field variables
-!!  CALL cmfe_EquationsSet_IndependentCreateFinish(EquationsSet,Err)
+  CALL cmfe_EquationsSet_IndependentCreateFinish(EquationsSet,Err)
 
   !-----------------------------------------------------------------------------------------------------------
   ! ANALYTICAL FIELD
@@ -442,7 +442,6 @@ PROGRAM STATIC_ADVECTION_DIFFUSION_EQUATION
     CALL cmfe_Fields_NodesExport(Fields,"StaticAdvectionDiffusion","FORTRAN",Err)
     CALL cmfe_Fields_ElementsExport(Fields,"StaticAdvectionDiffusion","FORTRAN",Err)
     CALL cmfe_Fields_Finalise(Fields,Err)
-
   ENDIF
 
   !CALL cmfe_Finalise(Err)
