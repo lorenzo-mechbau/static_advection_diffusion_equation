@@ -1,0 +1,6 @@
+$name = "static_advection_diffusion_equation";
+
+gfx read node $name.part0.exnode;
+gfx read elem $name.part0.exelem;
+
+gfx def faces egroup $name;
