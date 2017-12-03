@@ -8,10 +8,10 @@ gfx def faces egroup $name;
 gfx modify g_element $name general clear circle_discretization 6 default_coordinate Coordinate element_discretization "12*12*12";
 gfx modify g_element $name lines select_on invisible material default selected_material default_selected;
 
-#gfx create spectrum u;
-#gfx modify spectrum u clear overwrite_colour;
-#gfx modify spectrum u linear reverse range 0.533182 0.964028 extend_above extend_below rainbow colour_range 0 1 component 1;
-#gfx modify g_element $name surfaces select_on material default data u spectrum u selected_material default_selected render_shaded;
+gfx create spectrum u;
+gfx modify spectrum u clear overwrite_colour;
+gfx modify spectrum u linear reverse range 0.533182 0.964028 extend_above extend_below rainbow colour_range 0 1 component 1;
+gfx modify g_element $name surfaces select_on material default data u spectrum u selected_material default_selected render_shaded;
 
 
 #gfx create spectrum deludeln;
@@ -36,10 +36,10 @@ gfx modify g_element $name lines select_on invisible material default selected_m
 #gfx modify spectrum velocity1 linear reverse range -0.996165 0.932039 extend_above extend_below rainbow colour_range 0 1 component 1;
 #gfx modify g_element $name surfaces select_on material default data velocity.1 spectrum velocity1 selected_material default_selected render_shaded;
 
-gfx create spectrum velocity2;
-gfx modify spectrum velocity2 clear overwrite_colour;
-gfx modify spectrum velocity2 linear reverse range -0.989992 1 extend_above extend_below rainbow colour_range 0 1 component 1;
-gfx modify g_element $name surfaces select_on material default data velocity.2 spectrum velocity2 selected_material default_selected render_shaded;
+#gfx create spectrum velocity2;
+#gfx modify spectrum velocity2 clear overwrite_colour;
+#gfx modify spectrum velocity2 linear reverse range -0.989992 1 extend_above extend_below rainbow colour_range 0 1 component 1;
+#gfx modify g_element $name surfaces select_on material default data velocity.2 spectrum velocity2 selected_material default_selected render_shaded;
 
 gfx create axes length 0.5;
 gfx draw axes;
