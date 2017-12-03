@@ -6,7 +6,9 @@ This example solves the weak form of the following static advection-diffusion eq
 
 |static_advection_diffusion_equation|
 
-using the Galerkin method. |velocity_vector| and |conductivity_tensor| are the velocity vector and symmetric, positive definite rank two conductivity tensor respectively. The dependent variable |c| is a spatially varying scalar field (e.g. concentration of constituents or species). Note that the velocity field must be prescribed. In this example an isotropic and homogeneous material with |equation1| (identity tensor) and |equation2| is considered. 
+using the Galerkin method. |velocity_vector| and |conductivity_tensor| are the velocity vector and symmetric, positive definite rank two conductivity tensor respectively. The dependent variable |c| is a spatially varying scalar field (e.g. concentration of constituents or species). Note that the velocity field must be prescribed and is called the independent variable. In this example an isotropic and homogeneous material with |equation1| (identity tensor) and is considered. 
+
+Note that boundary conditions, the independent variable and source term are prescribed to match those required for the analytical solution.
 
 The general form of the advection-diffusion eqaution is
 
@@ -27,9 +29,6 @@ The general form of the advection-diffusion eqaution is
    
 .. |equation1| image:: ./docs/images/equation1.svg 
    :align: middle
-   
-.. |equation2| image:: ./docs/images/equation2.svg 
-   :align: bottom   
    
 .. |full_advection_diffusion_equation| image:: ./docs/images/full_advection_diffusion_equation.svg 
    :align: middle
@@ -93,7 +92,7 @@ Figure 1. (a) Primary variable solution (b) Secondary variable solution (c) Sour
 
 |figure1d|  |figure1e|  |figure1f|
 
-Figure 1. (a) Conducivity (b) Velocity-x component (c) Velocity-y component
+Figure 1. (d) Conducivity (e) Velocity-x component (f) Velocity-y component
 
 The expected results from this example are available in `expected_results <./src/fortran/expected_results>`_ folder.  
 
