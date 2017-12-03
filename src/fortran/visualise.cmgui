@@ -11,12 +11,12 @@ gfx modify g_element $name lines select_on invisible material default selected_m
 gfx create spectrum u;
 gfx modify spectrum u clear overwrite_colour;
 gfx modify spectrum u linear reverse range 0.533182 0.964028 extend_above extend_below rainbow colour_range 0 1 component 1;
-#gfx modify g_element $name surfaces select_on material default data u spectrum u selected_material default_selected render_shaded;
+gfx modify g_element $name surfaces select_on material default data u spectrum u selected_material default_selected render_shaded;
 
 gfx create spectrum deludeln;
 gfx modify spectrum deludeln clear overwrite_colour;
 gfx modify spectrum deludeln linear reverse range -0.00269063 0.00257469 extend_above extend_below rainbow colour_range 0 1 component 1;
-gfx modify g_element $name surfaces select_on material default data deludeln spectrum deludeln selected_material default_selected render_shaded;
+#gfx modify g_element $name surfaces select_on material default data deludeln spectrum deludeln selected_material default_selected render_shaded;
 
 gfx create spectrum diffusivity;
 gfx modify spectrum diffusivity clear overwrite_colour;
