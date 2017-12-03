@@ -1,0 +1,54 @@
+$name = "static_advection_diffusion_equation";
+
+gfx read node $name.part0.exnode;
+gfx read elem $name.part0.exelem;
+
+gfx def faces egroup $name;
+
+gfx modify g_element $name general clear circle_discretization 6 default_coordinate Coordinate element_discretization "12*12*12";
+gfx modify g_element $name lines select_on invisible material default selected_material default_selected;
+
+gfx create spectrum u;
+gfx modify spectrum u clear overwrite_colour;
+gfx modify spectrum u linear reverse range 0.533182 0.964028 extend_above extend_below rainbow colour_range 0 1 component 1;
+gfx modify g_element $name surfaces select_on material default data u spectrum u selected_material default_selected render_shaded;
+
+gfx create spectrum deludeln;
+gfx modify spectrum deludeln clear overwrite_colour;
+gfx modify spectrum deludeln linear reverse range -0.00269063 0.00257469 extend_above extend_below rainbow colour_range 0 1 component 1;
+#gfx modify g_element $name surfaces select_on material default data deludeln spectrum deludeln selected_material default_selected render_shaded;
+
+gfx create spectrum diffusivity;
+gfx modify spectrum diffusivity clear overwrite_colour;
+gfx modify spectrum diffusivity linear reverse range 0.1 0.1 extend_above extend_below rainbow colour_range 0 1 component 1;
+#gfx modify g_element $name surfaces select_on material default data diffusivity spectrum diffusivity selected_material default_selected render_shaded;
+
+gfx create spectrum source;
+gfx modify spectrum source clear overwrite_colour;
+gfx modify spectrum source linear reverse range -0.683419 0.563338 extend_above extend_below rainbow colour_range 0 1 component 1;
+#gfx modify g_element $name surfaces select_on material default data source spectrum source selected_material default_selected render_shaded;
+
+gfx create spectrum velocity1;
+gfx modify spectrum velocity1 clear overwrite_colour;
+gfx modify spectrum velocity1 linear reverse range -0.998962 0.998543 extend_above extend_below rainbow colour_range 0 1 component 1;
+#gfx modify g_element $name surfaces select_on material default data velocity.1 spectrum velocity1 selected_material default_selected render_shaded;
+
+gfx create spectrum velocity2;
+gfx modify spectrum velocity2 clear overwrite_colour;
+gfx modify spectrum velocity2 linear reverse range -0.999965 1 extend_above extend_below rainbow colour_range 0 1 component 1;
+#gfx modify g_element $name surfaces select_on material default data velocity.2 spectrum velocity2 selected_material default_selected render_shaded;
+
+
+gfx create axes length 0.5;
+gfx draw axes;
+gfx set transformation name axes 1 0 0 0 0 1 0 0 0 0 1 0 -0.1 -0.1 0 1;
+
+gfx create window 1 double_buffer;
+gfx modify window 1 image scene default light_model default;
+gfx modify window 1 image add_light default;
+gfx modify window 1 layout 2d ortho_axes z -y eye_spacing 0.25 width 520 height 380;
+gfx modify window 1 set current_pane 1;
+gfx modify window 1 background colour 0 0 0 texture none;
+gfx modify window 1 view parallel eye_point 0.967408 0.454352 4.83589 interest_point 0.967408 0.454352 0 up_vector -0 1 -0 view_angle 27.4744 near_clipping_plane 0.0483589 far_clipping_plane 17.2818 relative_viewport ndc_placement -1 1 2 2 viewport_coordinates 0 0 1 1;
+gfx modify window 1 overlay scene none;
+gfx modify window 1 set transform_tool current_pane 1 std_view_angle 40 normal_lines no_antialias depth_of_field 0.0 fast_transparency blend_normal;
