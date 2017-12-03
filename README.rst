@@ -78,11 +78,11 @@ The following figure shows the solutions and various field variables (source ter
    :width: 250
    :scale: 100
   
-.. |figure1e| image:: ./docs/images/ux.svg
+.. |figure1e| image:: ./docs/images/vx.svg
    :width: 250
    :scale: 100     
   
-.. |figure1f| image:: ./docs/images/uv.svg
+.. |figure1f| image:: ./docs/images/vy.svg
    :width: 250
    :scale: 100   
   
