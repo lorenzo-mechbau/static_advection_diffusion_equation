@@ -8,7 +8,7 @@ This example solves the weak form of the following static advection-diffusion eq
 
 using the Galerkin method. |velocity_vector| and |conductivity_tensor| are the velocity vector and symmetric, positive definite rank two conductivity tensor respectively. The dependent variable |c| is a spatially varying scalar field (e.g. concentration of constituents or species). Note that the velocity field must be prescribed and is called the independent variable. In this example an isotropic and homogeneous material with |equation1| (identity tensor) and is considered. 
 
-Note that boundary conditions, the independent variable and source term are prescribed to match those required for the analytical solution.
+The independent variable, source term and boundary conditions are prescribed to match those required for the analytical solution.
 
 The general form of the advection-diffusion eqaution is
 
