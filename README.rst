@@ -60,7 +60,7 @@ Verifying the example
 
 Results can be visualised by running `visualise.cmgui <./src/fortran/visualise.cmgui>`_ with the `Cmgui visualiser <http://physiomeproject.org/software/opencmiss/cmgui/download>`_.
 
-The following figure shows the solutions and various field variables 
+The following figure shows the solutions and various field variables (source term, diffusivity and velocity - the independent variable). 
 
 .. |figure1a| image:: ./docs/images/u.svg
    :width: 250
@@ -74,16 +74,26 @@ The following figure shows the solutions and various field variables
    :width: 250
    :scale: 100   
    
+.. |figure1d| image:: ./docs/images/diffusivity.svg
+   :width: 250
+   :scale: 100
   
+.. |figure1e| image:: ./docs/images/ux.svg
+   :width: 250
+   :scale: 100     
   
-  
-  
-  
+.. |figure1f| image:: ./docs/images/uv.svg
+   :width: 250
+   :scale: 100   
   
   
 |figure1a|  |figure1b|  |figure1c|
 
 Figure 1. (a) Primary variable solution (b) Secondary variable solution (c) Source term
+
+|figure1d|  |figure1e|  |figure1f|
+
+Figure 1. (a) Diffusivity (b) Velocity-x component (c) Velocity-y component
 
 The expected results from this example are available in `expected_results <./src/fortran/expected_results>`_ folder.  
 
