@@ -60,9 +60,30 @@ Verifying the example
 
 Results can be visualised by running `visualise.cmgui <./src/fortran/visualise.cmgui>`_ with the `Cmgui visualiser <http://physiomeproject.org/software/opencmiss/cmgui/download>`_.
 
-The following figure shows the finite element mesh (computational domain) and solutions 
+The following figure shows the solutions and various field variables 
 
-Figure 1. (a) Finite element mesh (b) Primary variable solution (c) Secondary variable solution
+.. |figure1a| image:: ./docs/images/u.svg
+   :width: 250
+   :scale: 100
+
+.. |figure1b| image:: ./docs/images/deludeln.svg
+   :width: 250
+   :scale: 100
+   
+.. |figure1c| image:: ./docs/images/source.svg
+   :width: 250
+   :scale: 100   
+   
+  
+  
+  
+  
+  
+  
+  
+|figure1a|  |figure1b|  |figure1c|
+
+Figure 1. (a) Primary variable solution (b) Secondary variable solution (c) Source term
 
 The expected results from this example are available in `expected_results <./src/fortran/expected_results>`_ folder.  
 
