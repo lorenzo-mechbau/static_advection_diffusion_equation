@@ -60,7 +60,7 @@ Verifying the example
 
 Results can be visualised by running `visualise.cmgui <./src/fortran/visualise.cmgui>`_ with the `Cmgui visualiser <http://physiomeproject.org/software/opencmiss/cmgui/download>`_.
 
-The following figure shows the solutions and various field variables (source term, diffusivity and velocity - the independent variable). 
+The following figure shows the solutions and various field variables (source term, conducivity and velocity - the independent variable). 
 
 .. |figure1a| image:: ./docs/images/u.svg
    :width: 250
