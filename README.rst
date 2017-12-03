@@ -93,7 +93,7 @@ Figure 1. (a) Primary variable solution (b) Secondary variable solution (c) Sour
 
 |figure1d|  |figure1e|  |figure1f|
 
-Figure 1. (a) Diffusivity (b) Velocity-x component (c) Velocity-y component
+Figure 1. (a) Conducivity (b) Velocity-x component (c) Velocity-y component
 
 The expected results from this example are available in `expected_results <./src/fortran/expected_results>`_ folder.  
 
