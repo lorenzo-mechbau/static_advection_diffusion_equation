@@ -74,7 +74,7 @@ The following figure shows the solutions and various field variables (source ter
    :width: 250
    :scale: 100   
    
-.. |figure1d| image:: ./docs/images/diffusivity.svg
+.. |figure1d| image:: ./docs/images/conductivity.svg
    :width: 250
    :scale: 100
   
