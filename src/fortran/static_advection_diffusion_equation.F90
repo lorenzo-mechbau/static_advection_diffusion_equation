@@ -207,7 +207,7 @@ PROGRAM StaticAdvectionDiffusionEquation
   
   CALL cmfe_Field_Initialise(GeometricField,Err)
   CALL cmfe_Field_CreateStart(GeometricFieldUserNumber,Region,GeometricField,Err)
-  CALL cmfe_Field_MeshDecompositionSet(GeometricField,Decomposition,Err)
+  CALL cmfe_Field_DecompositionSet(GeometricField,Decomposition,Err)
   CALL cmfe_Field_ComponentMeshComponentSet(GeometricField,CMFE_FIELD_U_VARIABLE_TYPE,1,1,Err)
   CALL cmfe_Field_ComponentMeshComponentSet(GeometricField,CMFE_FIELD_U_VARIABLE_TYPE,2,1,Err)
   IF(NUMBER_GLOBAL_Z_ELEMENTS/=0) THEN
